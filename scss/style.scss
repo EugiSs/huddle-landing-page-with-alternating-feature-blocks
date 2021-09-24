@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+// colors
+$Pink: hsl(322, 100%, 66%);
+$PaleCyan: hsl(193, 100%, 96%);
+$DarkCyan: hsl(192, 100%, 9%);
+$GrayishBlue: hsl(208, 11%, 55%);
+// font-size
+$h3-size: 26px;
+$h2-size: 30px;
+
+// templates
+%flex-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%btn {
+  border: none;
+  background-color: #fff;
+  border-radius: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 5px 10px 0.5px transparentize($GrayishBlue, 0.8);
+  padding: 13px 70px;
+}
+%heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+// mixins
+@mixin size($_w, $_h) {
+  width: $_w;
+  height: $_h;
+}
+
+//
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  background-color: $PaleCyan;
+  background-image: url(../images/bg-hero-desktop.svg);
+  padding: 40px 80px;
+  margin-bottom: 160px;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.wrapper {
+  width: 1440px;
+  margin: 0 auto;
+}
+.btn {
+  @extend %btn;
+
+  &:hover {
+    cursor: url(../images/hand-pointer-regular.svg), auto;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.header__top {
+  @extend %flex-sb;
+  margin-bottom: 70px;
+}
+.header__box {
+  @extend %flex-sb;
+  margin-bottom: 30px;
+
+  & h1 {
+    @extend %heading;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  & .header__text {
+    margin-bottom: 30px;
+  }
+  & > img {
+    @include size(700px, 500px);
+    margin-left: 60px;
+  }
+}
+.btn-pink {
+  background-color: $Pink;
+  color: #fff;
+  padding: 18px 70px;
+}
+main {
+  @extend %flex-center;
+}
+.inner {
+  @extend %flex-center;
+  flex-direction: column;
+  width: 1230px;
+}
+.infoblock {
+  @extend %flex-sb;
+  margin-bottom: 30px;
+  padding: 60px 30px 60px 120px;
+  border-radius: 10px;
+  box-shadow: 0 0px 10px 0.5px transparentize($GrayishBlue, 0.8);
+
+  &__content {
+    width: 50%;
+    padding-right: 30px;
+  }
+  & > img {
+    @include size(36%, 50%);
+  }
+  & h3 {
+    font-size: $h3-size;
+    @extend %heading;
+    margin-bottom: 15px;
+  }
+  &__text {
+    color: $GrayishBlue;
+  }
+}
+.infoblock-reverse {
+  flex-direction: row-reverse;
+
+  & .infoblock__content {
+    padding-right: 0;
+    padding-left: 30px;
+  }
+}
+footer {
+  width: 100%;
+  background-color: $DarkCyan;
+  color: #fff;
+  margin-top: 340px;
+  overflow: hidden;
+
+  .block {
+    padding: 190px 215px 20px 115px;
+  }
+  .logo-bottom {
+    margin-bottom: 40px;
+  }
+  .content {
+    display: flex;
+    align-items: flex-start;
+  }
+  span {
+    float: right;
+    font-size: 12px;
+    padding-bottom: 65px;
+    padding-right: 80px;
+  }
+}
+.content__info {
+  width: 390px;
+  font-size: 16px;
+  margin-right: 135px;
+
+  li {
+    padding-left: 25px;
+    padding-bottom: 30px;
+  }
+  .location {
+    list-style-image: url(../images/icon-location.svg);
+  }
+  .phone {
+    list-style-image: url(../images/icon-phone.svg);
+  }
+  .email {
+    list-style-image: url(../images/icon-email.svg);
+    padding-bottom: 0;
+  }
+}
+.content__menu {
+  width: 320px;
+  margin-right: 150px;
+}
+.menu {
+  @include size(100%, 160px);
+  display: flex;
+  flex-flow: column wrap;
+
+  & > a {
+    padding-bottom: 25px;
+    padding-right: 120px;
+  }
+}
+.socials {
+  width: 120px;
+
+  & a {
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  & .fab {
+    padding: 8px;
+    font-size: 16px;
+  }
+  & a:last-child {
+    margin-right: 0px;
+  }
+}
+
+//
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
