@@ -19,7 +19,7 @@
   font-size: 14px;
   font-weight: 700;
   box-shadow: 0 5px 10px 0.5px rgba(128, 141, 153, 0.2);
-  padding: 13px 70px;
+  padding: 13px 65px;
 }
 
 .call-to-action h2, .infoblock h3, .header__box h1 {
@@ -37,8 +37,8 @@ header {
   width: 100%;
   background-color: #ebfbff;
   background-image: url(../images/bg-hero-desktop.svg);
-  padding: 40px 80px;
-  margin-bottom: 160px;
+  padding: 45px 80px;
+  margin-bottom: 170px;
 }
 
 body {
@@ -62,12 +62,12 @@ a {
 }
 
 .header__top {
-  margin-bottom: 70px;
+  margin: 5px 0 70px 0;
+}
+.header__top img {
+  width: 83%;
 }
 
-.header__box {
-  margin-bottom: 30px;
-}
 .header__box h1 {
   font-size: 40px;
   margin-bottom: 30px;
@@ -76,8 +76,7 @@ a {
   margin-bottom: 30px;
 }
 .header__box > img {
-  width: 700px;
-  height: 500px;
+  width: 55%;
   margin-left: 60px;
 }
 
@@ -97,25 +96,29 @@ main {
 }
 
 .infoblock {
-  margin-bottom: 30px;
+  width: 1230px;
+  height: 440px;
   padding: 60px 30px 60px 120px;
   border-radius: 10px;
   box-shadow: 0 0px 10px 0.5px rgba(128, 141, 153, 0.2);
 }
 .infoblock__content {
   width: 50%;
-  padding-right: 30px;
+  padding-right: 60px;
 }
 .infoblock > img {
-  width: 36%;
-  height: 50%;
+  width: 38%;
 }
 .infoblock h3 {
-  font-size: 26px;
+  font-size: 28px;
   margin-bottom: 15px;
 }
 .infoblock__text {
   color: #808d99;
+}
+
+.infoblock + .infoblock {
+  margin-top: 40px;
 }
 
 .infoblock-reverse {
@@ -139,13 +142,14 @@ main {
   bottom: -435px;
 }
 .call-to-action h2 {
-  font-size: 33px;
-  padding-bottom: 45px;
+  font-size: 32px;
+  padding-bottom: 35px;
+  padding-top: 15px;
 }
 .call-to-action > .btn-pink {
   width: 50%;
   height: 80px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 footer {
@@ -156,7 +160,7 @@ footer {
   overflow: hidden;
 }
 footer .block {
-  padding: 190px 215px 20px 115px;
+  padding: 190px 200px 20px 115px;
 }
 footer .logo-bottom {
   margin-bottom: 40px;
@@ -168,18 +172,18 @@ footer .content {
 footer span {
   float: right;
   font-size: 12px;
-  padding-bottom: 65px;
-  padding-right: 80px;
+  padding: 25px 90px 65px 0;
 }
 
 .content__info {
   width: 390px;
   font-size: 16px;
-  margin-right: 135px;
+  margin-right: 140px;
+  margin-left: -15px;
 }
 .content__info li {
-  padding-left: 25px;
-  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 .content__info > a {
   display: table-cell;
@@ -208,21 +212,22 @@ footer span {
   flex-flow: column wrap;
 }
 .menu > a {
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   padding-right: 120px;
 }
 
 .socials {
-  width: 120px;
+  width: 130px;
 }
 .socials a {
   border: 1px solid white;
   border-radius: 50%;
-  margin-right: 5px;
+  margin-right: 7px;
 }
 .socials .fab {
   padding: 8px;
-  font-size: 16px;
+  width: 22%;
+  font-size: 14px;
 }
 .socials a:last-child {
   margin-right: 0px;

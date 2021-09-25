@@ -6,8 +6,8 @@ $PaleCyan: hsl(193, 100%, 96%);
 $DarkCyan: hsl(192, 100%, 9%);
 $GrayishBlue: hsl(208, 11%, 55%);
 // font-size
-$h3-size: 26px;
-$h2-size: 33px;
+$h3-size: 28px;
+$h2-size: 32px;
 
 // templates
 %flex-sb {
@@ -28,7 +28,7 @@ $h2-size: 33px;
   font-size: 14px;
   font-weight: 700;
   box-shadow: 0 5px 10px 0.5px transparentize($GrayishBlue, 0.8);
-  padding: 13px 70px;
+  padding: 13px 65px;
 }
 %heading {
   font-family: "Poppins", sans-serif;
@@ -51,8 +51,8 @@ header {
   width: 100%;
   background-color: $PaleCyan;
   background-image: url(../images/bg-hero-desktop.svg);
-  padding: 40px 80px;
-  margin-bottom: 160px;
+  padding: 45px 80px;
+  margin-bottom: 170px;
 }
 body {
   font-family: "Open Sans", sans-serif;
@@ -76,11 +76,14 @@ a {
 }
 .header__top {
   @extend %flex-sb;
-  margin-bottom: 70px;
+  margin: 5px 0 70px 0;
+
+  & img {
+    width: 83%;
+  }
 }
 .header__box {
   @extend %flex-sb;
-  margin-bottom: 30px;
 
   & h1 {
     @extend %heading;
@@ -91,7 +94,7 @@ a {
     margin-bottom: 30px;
   }
   & > img {
-    @include size(700px, 500px);
+    width: 55%;
     margin-left: 60px;
   }
 }
@@ -111,17 +114,18 @@ main {
 }
 .infoblock {
   @extend %flex-sb;
-  margin-bottom: 30px;
+  @include size(1230px, 440px);
+  // margin-bottom: 40px;
   padding: 60px 30px 60px 120px;
   border-radius: 10px;
   box-shadow: 0 0px 10px 0.5px transparentize($GrayishBlue, 0.8);
 
   &__content {
     width: 50%;
-    padding-right: 30px;
+    padding-right: 60px;
   }
   & > img {
-    @include size(36%, 50%);
+    width: 38%;
   }
   & h3 {
     font-size: $h3-size;
@@ -132,6 +136,9 @@ main {
     color: $GrayishBlue;
   }
 }
+.infoblock + .infoblock {
+  margin-top: 40px;
+} 
 .infoblock-reverse {
   flex-direction: row-reverse;
 
@@ -155,11 +162,12 @@ main {
   h2 {
     @extend %heading;
     font-size: $h2-size;
-    padding-bottom: 45px;
+    padding-bottom: 35px;
+    padding-top: 15px;
   }
   & > .btn-pink {
     @include size(50%, 80px);
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
@@ -171,7 +179,7 @@ footer {
   overflow: hidden;
 
   .block {
-    padding: 190px 215px 20px 115px;
+    padding: 190px 200px 20px 115px;
   }
   .logo-bottom {
     margin-bottom: 40px;
@@ -183,18 +191,18 @@ footer {
   span {
     float: right;
     font-size: 12px;
-    padding-bottom: 65px;
-    padding-right: 80px;
+    padding: 25px 90px 65px 0;
   }
 }
 .content__info {
   width: 390px;
   font-size: 16px;
-  margin-right: 135px;
+  margin-right: 140px;
+  margin-left: -15px;
 
   li {
-    padding-left: 25px;
-    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-bottom: 20px;
   }
   & > a {
     display: table-cell;
@@ -221,21 +229,22 @@ footer {
   flex-flow: column wrap;
 
   & > a {
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     padding-right: 120px;
   }
 }
 .socials {
-  width: 120px;
+  width: 130px;
 
   & a {
     border: 1px solid white;
     border-radius: 50%;
-    margin-right: 5px;
+    margin-right: 7px;
   }
   & .fab {
     padding: 8px;
-    font-size: 16px;
+    width: 22%;
+    font-size: 14px;
   }
   & a:last-child {
     margin-right: 0px;
