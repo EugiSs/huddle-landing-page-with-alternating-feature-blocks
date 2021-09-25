@@ -96,8 +96,7 @@ main {
 }
 
 .infoblock {
-  width: 1230px;
-  height: 440px;
+  width: 100%;
   padding: 60px 30px 60px 120px;
   border-radius: 10px;
   box-shadow: 0 0px 10px 0.5px rgba(128, 141, 153, 0.2);
