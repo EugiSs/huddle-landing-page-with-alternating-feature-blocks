@@ -96,7 +96,8 @@ main {
 }
 
 .infoblock {
-  width: 100%;
+  width: 1230px;
+  height: 440px;
   padding: 60px 30px 60px 120px;
   border-radius: 10px;
   box-shadow: 0 0px 10px 0.5px rgba(128, 141, 153, 0.2);
@@ -125,7 +126,7 @@ main {
 }
 .infoblock-reverse .infoblock__content {
   padding-right: 0;
-  padding-left: 30px;
+  padding-left: 43px;
 }
 
 .call-to-action {
@@ -163,6 +164,7 @@ footer .block {
 }
 footer .logo-bottom {
   margin-bottom: 40px;
+  padding-left: 5px;
 }
 footer .content {
   display: flex;
