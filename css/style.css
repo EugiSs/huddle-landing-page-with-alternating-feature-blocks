@@ -5,7 +5,7 @@
   justify-content: space-between;
 }
 
-.inner, main {
+.call-to-action, .inner, main {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,9 +22,10 @@
   padding: 13px 70px;
 }
 
-.infoblock h3, .header__box h1 {
+.call-to-action h2, .infoblock h3, .header__box h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  color: #000;
 }
 
 * {
@@ -86,6 +87,10 @@ a {
   padding: 18px 70px;
 }
 
+main {
+  position: relative;
+}
+
 .inner {
   flex-direction: column;
   width: 1230px;
@@ -121,6 +126,28 @@ a {
   padding-left: 30px;
 }
 
+.call-to-action {
+  width: 800px;
+  height: 280px;
+  background-color: #fff;
+  flex-direction: column;
+  box-shadow: 0 0px 10px 0.5px rgba(128, 141, 153, 0.2);
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -435px;
+}
+.call-to-action h2 {
+  font-size: 33px;
+  padding-bottom: 45px;
+}
+.call-to-action > .btn-pink {
+  width: 50%;
+  height: 80px;
+  font-size: 16px;
+}
+
 footer {
   width: 100%;
   background-color: #00252e;
@@ -153,6 +180,10 @@ footer span {
 .content__info li {
   padding-left: 25px;
   padding-bottom: 30px;
+}
+.content__info > a {
+  display: table-cell;
+  vertical-align: middle;
 }
 .content__info .location {
   list-style-image: url(../images/icon-location.svg);
